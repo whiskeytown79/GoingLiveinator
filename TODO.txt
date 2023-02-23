@@ -1,0 +1,29 @@
+This app is going to let you put in a "going live" message, along with your stream
+link, and optionally an image, and then post it to various discords, twitter etc.
+
+To do this, it will need to use OAuth to post to discord and twitter on the
+user's behalf.
+
+Auth:
+- Implement OAuth API access for Discord
+- Implement OAuth API access for Twitter
+- We should never need the user to supply any credentials to this app - OAuth authorization
+  will be done with Discord and Twitter's existing OAuth flows, probably in the user's browser
+- Make sure OAuth tokens are stored securely
+
+Content:
+- Receive paste of text for going live message
+- Receive paste of image for optional image
+
+Configuration:
+- Allow adding new destinations (Discord server/channel, or Twitter account, etc)
+- Allow configuration of how message appears
+- Maybe a template, like "{message} - {streamUrl}{optionalImageData}"
+- Allow configuring whether to show the URL preview when also including an image (Discord)
+
+Posting:
+- Show progress and success/problem for each configured destination
+
+Future features:
+- Support YouTube streams in addition to Twitch streams
+- Other announcement destinations? (Instagram, Facebook, etc?)
